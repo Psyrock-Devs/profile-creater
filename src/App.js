@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component} from 'react';
 import './App.css';
+import UserForm from './components/userForm';
 
-function App() {
+class App extends Component {
+render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <div className="col-lg-8 mx-auto text-center mt-5">
+          <h1><b>Let's generate your Profile!</b></h1>
+          <p className="lead">Please kindly provide accurate and clear description wherever necessary.</p>
+          <hr />
+        </div>  
+        <UserForm/>
     </div>
   );
 }
-
+}
 export default App;
