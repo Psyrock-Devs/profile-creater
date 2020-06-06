@@ -6,13 +6,19 @@ import * as serviceWorker from './serviceWorker'
 import combineReducers from './lib/with-store'
 import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
+import 'react-mdl/extra/material.css';
+import 'react-mdl/extra/material.js';
+import {BrowserRouter} from 'react-router-dom';
+
 
 const store = createStore(combineReducers, composeWithDevTools(
   applyMiddleware()
 ))
 ReactDOM.render(
   <Provider store={store}>
+  <BrowserRouter>
     <App />
+    </BrowserRouter>
   </Provider>, document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change

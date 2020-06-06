@@ -3,18 +3,44 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMousePointer, faDownload, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 
+import {Layout, Header,Navigation,Drawer,Content} from 'react-mdl';
+import Router from './router';
+
 class Home extends Component {
   render () {
     return (
       <div className='container'>
+
+<Router/>
+{/* Always shows a header, even in smaller screens. */}
+<div style={{height: '80px', position: 'relative'}}>
+    <Layout fixedHeader>
+        <Header title={<span><span style={{ color: 'red' }}>Area / </span><strong>The Title</strong></span>}>
+            <Navigation>
+              
+                <Link to="/content">Content</Link>
+        
+              
+            </Navigation>
+        </Header>
+        <Drawer >
+            <Navigation>
+
+
+                <Link to="/">Link</Link>
+            </Navigation>
+        </Drawer>
+        <Content />
+    </Layout>
+</div>
         <div className='heading'>
-          <p className='mx-auto'>Build your Resume in just few Clicks.</p>
-          <p className='mx-auto'>
-            Creating a Professional Resume and Cover Letter is Easy Now.
-          </p>
+          <p className='mx-auto'>Lets create you resume!</p>
+        
           <Link to='/theme-selection' className='btn btn-lg build-now'>
            Start Here
           </Link>
+
+         
         </div>
         <div className='row'>
           <div className='instruction col-md-4 content mx-auto text-center mt-4'>

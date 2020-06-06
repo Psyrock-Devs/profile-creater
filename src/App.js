@@ -18,7 +18,7 @@ function App () {
         <div>
           <Switch>
             <Route exact path='/'>
-              <Home />
+                 <Home />
             </Route>
             <Route path='/theme-selection'>
               <ThemeSelection />
