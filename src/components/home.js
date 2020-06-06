@@ -10,15 +10,16 @@ class Home extends Component {
   render () {
     return (
       <div className='container'>
+       
+<content/>
 
-<Router/>
 {/* Always shows a header, even in smaller screens. */}
-<div style={{height: '80px', position: 'relative'}}>
+<div style={{height: '200px', position: 'relative'}}>
     <Layout fixedHeader>
-        <Header title={<span><span style={{ color: 'red' }}>Area / </span><strong>The Title</strong></span>}>
+        <Header title={<span><span style={{ color: '#ddd' }}> </span><strong></strong></span>}>
             <Navigation>
               
-                <Link to="/content">Content</Link>
+                <Link to="/Router">Content</Link>
         
               
             </Navigation>
@@ -27,9 +28,9 @@ class Home extends Component {
             <Navigation>
 
 
-                <Link to="/">Link</Link>
             </Navigation>
         </Drawer>
+        <Router/>
         <Content />
     </Layout>
 </div>
