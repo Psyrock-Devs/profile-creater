@@ -2,9 +2,15 @@
     display: flex !important;
     align-items: center !important;
     cursor: pointer;
+    max-height: 400px ;
+
 }
 
 .video-item.item img {
+   
     max-width: 300px;
-    max-height: 300px ;
+    max-height: 200px ;
+}
+body{
+    background-color: white;
 }

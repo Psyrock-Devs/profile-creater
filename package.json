@@ -10,7 +10,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^8.0.2",
-    "axios": "^0.19.2",
+    "axios": "^0.18.1",
     "bootstrap": "^4.5.0",
     "html2canvas": "^1.0.0-rc.5",
     "immer": "^5.1.0",
@@ -26,6 +26,7 @@
     "redux": "^4.0.5",
     "semantic-ui-react": "^0.88.2",
     "shards-react": "^1.0.3",
+    "styled-jsx": "^3.3.0",
     "youtube-api-search": "0.0.5"
   },
   "scripts": {
@@ -51,9 +52,10 @@
     ]
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "node-sass": "^4.13.1",
     "prettier": "^1.19.1",
-    "redux-devtools-extension": "^2.13.8",
-    "node-sass": "^4.13.1"
+    "redux-devtools-extension": "^2.13.8"
   },
   "resolutions": {
     "hoek": "4.2.1",

@@ -3,45 +3,29 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMousePointer, faDownload, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 
-import {Layout, Header,Navigation,Drawer,Content} from 'react-mdl';
+
 import Router from './router';
 
 class Home extends Component {
+ 
   render () {
+ 
     return (
       <div className='container'>
-       
-<content/>
+
+<content className = "mycontent"/>
 
 {/* Always shows a header, even in smaller screens. */}
-<div style={{height: '200px', position: 'relative'}}>
-    <Layout fixedHeader>
-        <Header title={<span><span style={{ color: '#ddd' }}> </span><strong></strong></span>}>
-            <Navigation>
-              
-                <Link to="/Router">Content</Link>
-        
-              
-            </Navigation>
-        </Header>
-        <Drawer >
-            <Navigation>
-
-
-            </Navigation>
-        </Drawer>
-        <Router/>
-        <Content />
-    </Layout>
+<div style={{height: '50px', position: 'relative'}}>
+                <Link to="/Router"></Link>
 </div>
         <div className='heading'>
-          <p className='mx-auto'>Lets create you resume!</p>
-        
-          <Link to='/theme-selection' className='btn btn-lg build-now'>
-           Start Here
-          </Link>
+          <p className='mx-auto'>Prepare your resume</p>
+          <br/>
 
-         
+          <Link to='/theme-selection' className='btn btn-lg build-now'>
+           Here
+          </Link>
         </div>
         <div className='row'>
           <div className='instruction col-md-4 content mx-auto text-center mt-4'>
@@ -55,8 +39,10 @@ class Home extends Component {
               <FontAwesomeIcon icon={faDownload} />&nbsp; Download PDF
             </p>
           </div>
+          
+          <Router/>
         </div>
-        <style jsx>
+    <style>
           {`
             .instruction p {
               font-size: 30px;
@@ -66,6 +52,7 @@ class Home extends Component {
               align-items: center;
               color: #26547C;
             }
+            
 
             .instruction {
               margin-top: 50px !important;
